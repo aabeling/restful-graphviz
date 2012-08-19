@@ -1,4 +1,4 @@
-package de.banapple.graphviz.configuration;
+package de.banapple.graphviz.configuration.main;
 
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +9,9 @@ import org.springframework.core.io.Resource;
 
 @Configuration
 // @ImportResource( { "classpath*:/rest_config.xml" } )
-@ComponentScan(basePackages = "de.banapple.graphviz")
+@ComponentScan(basePackages = {
+        "de.banapple.graphviz.configuration.main",
+        "de.banapple.graphviz.controller" })
 public class ApplicationConfig
 {
 

@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import de.banapple.graphviz.GraphvizProcessor;
+
 @Configuration
 // @ImportResource( { "classpath*:/rest_config.xml" } )
 @ComponentScan(basePackages = {
@@ -28,4 +30,10 @@ public class ApplicationConfig
         return ppc;
     }
 
+    @Bean
+    public GraphvizProcessor graphvizProcessor()
+    {
+        GraphvizProcessor result = new GraphvizProcessor();
+        return result;
+    }
 }
